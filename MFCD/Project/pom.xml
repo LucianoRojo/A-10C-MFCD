@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.Application.App</groupId>
-  <artifactId>EntitiesClassifier</artifactId>
+  <artifactId>MFCD</artifactId>
   <version>0.1</version>
 
   <name>MFCD</name>
-  <url>https://docs.google.com/document/d/e/2PACX-1vQn5BpCPQ6jKMN-sz46261Qot82KbDZ1RUx8jNzAN4kBEAq_i97T3R6ZA0_yRA5elN66e-EArXQXuAh/pub</url>
+  <!--<url></url>-->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
