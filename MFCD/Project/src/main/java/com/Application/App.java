@@ -1,6 +1,11 @@
 package com.Application;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -8,24 +13,46 @@ public final class App extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-        // Set the title of the window (Stage)
-        primaryStage.setTitle("JavaFX Sample");
+        primaryStage.setTitle("Vi är Sverige!");
 
-        // Initialize the root node. In this case, a simple Pane will do.
-        Pane root = new Pane();
+        StackPane root = new StackPane();
+        
+        // Main image, will switch this line to a relative route in the future.
+        Image image = new Image("file:/home/luciano_/Projects/A-10C-MFCD/MFCD/Project/Resources/screen.png");
 
-        // Create a Scene with the root node and set its dimensions
-        Scene scene = new Scene(root, 300, 200); // Width, height
+        // ImageView with the background image, this should never change.
+        ImageView imageView = new ImageView(image);
 
-        // Add the Scene to the Stage
+        imageView.setFitWidth(600); // Adjust width 
+        imageView.setFitHeight(600); // Adjust height
+        imageView.setPreserveRatio(true);
+
+        // Create a button and set its text
+        Button button = new Button("OSB 1");
+
+        // Set button position
+        button.setLayoutX(50); // X position
+        button.setLayoutY(50); // Y position
+
+        // Add an event handler to the button
+        /* 
+        button.setOnAction(event -> {
+            System.out.println("Button clicked!");
+            // Add actions to perform when the button is clicked
+        });
+        */
+
+        // Add the ImageView and Button to the Pane
+        root.getChildren().addAll(imageView, button);
+        
+        //These two resolutions should always match. Otherwise you will have to manually resize the window.
+        Scene scene = new Scene(root, 600, 600);         
         primaryStage.setScene(scene);
-
-        // Display the Stage
         primaryStage.show();
+        Menu main = new Menu(primaryStage, imageView, root);
     }
 
     public static void main(String[] args) {
-        // Launch the JavaFX application
         launch(args);
     }
 }
