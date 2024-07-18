@@ -25,7 +25,7 @@ public final class App extends Application {
 
         imageView.setFitWidth(600); // Adjust width 
         imageView.setFitHeight(600); // Adjust height
-        imageView.setPreserveRatio(true);
+        imageView.setPreserveRatio(false);
 
         // Create a button and set its text
         Button button = new Button("OSB 1");

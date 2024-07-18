@@ -27,28 +27,25 @@ public class Menu {
         Circle circleShape = new Circle(110); 
         Button[] b = new Button[20];
         for (int i = 0; i < b.length; i++) {
-            b[i] = new Button("" + (i + 1)); // Step 2: Instantiate each Button
+            b[i] = new Button("" + (i + 1));
             b[i].setShape(circleShape);
             b[i].setMinSize(40, 40);
         }
-        int X1 = 153;
-        int Y1 = 30;
+        int X1 = 150;
+        int Y1 = 7;
         int j = 0;
-        
-            while(j<=4){
-                setPosition(b[j], X1, Y1);
-                X1 += 64;
-                j++;
-            }  
-            
-            X1 = 900;
-            while (j > 4 && j <= 9) {
-                b[j].setLayoutX(X1); // X position
-                b[j].setLayoutY(Y1); // Y position
-                X1 += 64;
-                j++;
-            
-            }
+        while(j<=4){
+            setPosition(b[j], X1, Y1);
+            X1 += 66;
+            j++;
+        }  
+        X1 = 900;
+        while (j > 4 && j <= 9) {
+            b[j].setLayoutX(X1); // X position
+            b[j].setLayoutY(Y1); // Y position
+            X1 += 64;
+            j++;
+        }
         Pane newLayout = new Pane();
         Text text = new Text("I'm a sample menu");
         text.setFill(Color.GREEN); // Set the text color to green
