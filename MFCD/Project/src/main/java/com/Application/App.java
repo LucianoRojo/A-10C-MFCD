@@ -1,4 +1,5 @@
 package com.Application;
+import com.Application.Menus.Main;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -60,6 +61,7 @@ public final class App extends Application {
             b[i] = new Button("" + (i + 1));
             b[i].setShape(circleShape);
             b[i].setMinSize(40, 40);
+            b[i].setOpacity(0.1);
         }
         while(j<=4){
             setPosition(b[j], X1, Y1);
@@ -81,6 +83,13 @@ public final class App extends Application {
             X1 -= 66;
             j++;
         }
+        X1 = 15;
+        Y1 -= 150;
+        while(j>14 && j <= 19){
+            setPosition(b[j], X1, Y1);
+            Y1 -= 66;
+            j++;
+        }
 
         Pane newLayout = new Pane();
         Text text = new Text("Vi Är Sverige");
@@ -100,7 +109,8 @@ public final class App extends Application {
         root.getChildren().addAll(text);
         Scene scene = new Scene(root, 600, 600);         
         primaryStage.setScene(scene);
-        primaryStage.show();    
+        primaryStage.show();
+        Main main = new Main(primaryStage, new ImageView(), root, b);    
     }
 
     public static void main(String[] args) {

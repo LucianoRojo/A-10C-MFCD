@@ -2,3 +2,4 @@ Define main project structure.
 /home/luciano_/Projects/A-10C-MFCD/javafx-sdk-17.0.11/lib
 Implement a variable resolution.
 Change the X1 and Y1 coordinates so they are percentages of the choosen resolution.
+Find out how can I delete older text from the screen.
