@@ -8,7 +8,7 @@ The development of this application will try to cover most functions that the le
 The main goals of this project are to make a niche-specific application featuring an interactive user interface and to prove my own knowlegde about many of the airframe's software components and their manipulation.
 
 ## How
-This software will rely on JavaFX to accomplish most display-related tasks (handling the user's interaction with OSB's, and the screen itself). Built with Maven, Java 17 will be the backbone of this whole project and I'd rather keep it as simple as possible.
+This software will rely on JavaFX to accomplish most display-related tasks (handling the user's interaction with OSB's, and the screen itself).
 The intention is to be as faithful as possible to the real version which, among other things, means that the implementation of the systems described below will be directly based on the information available from trustworthy sources like Fairchild Republic's official flight manual, Chuck Guide's documentation for the corresponding Digital Combat Simulator Module, and lastly but not least, the Eagle Dynamics official user manual for the mentioned module.
 
 ## Systems to be featured
